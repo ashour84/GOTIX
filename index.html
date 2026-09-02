@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blade Aces Game of Throws IX</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e2e8f0;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    min-height: 100vh;
+    padding: 50px 20px;
+  }
+  .wrap { max-width: 1000px; margin: 0 auto; }
+  .header { text-align: center; margin-bottom: 50px; }
+  .header .badge {
+    display: inline-block;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fbbf24;
+    border: 1px solid #fbbf24;
+    border-radius: 999px;
+    padding: 4px 16px;
+    margin-bottom: 18px;
+  }
+  .header h1 {
+    font-size: 3rem;
+    color: #f1f5f9;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 8px;
+  }
+  .header .date {
+    font-size: 1.3rem;
+    color: #fbbf24;
+    font-weight: bold;
+  }
+  .section { margin-bottom: 44px; }
+  .section h2 {
+    font-size: 1.4rem;
+    color: #f1f5f9;
+    border-bottom: 3px solid #fbbf24;
+    padding-bottom: 10px;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+  }
+  .btn {
+    display: block;
+    text-align: center;
+    background: #1e293b;
+    border: 1px solid #334155;
+    color: #f1f5f9;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 26px 16px;
+    border-radius: 12px;
+    transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+  }
+  .btn:hover {
+    transform: translateY(-4px);
+    background: #fbbf24;
+    color: #0f172a;
+    border-color: #fbbf24;
+  }
+  footer {
+    text-align: center;
+    color: #64748b;
+    font-size: 0.85rem;
+    margin-top: 60px;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <span class="badge">🏆 Tournament Results</span>
+      <h1>Blade Aces Game of Throws IX</h1>
+      <div class="date">8/26</div>
+    </div>
+
+    <div class="section">
+      <h2>📊 Euro Events</h2>
+      <div class="grid">
+        <a class="btn" href="euro-3m-knife.html">3M Knife</a>
+        <a class="btn" href="euro-5m-knife.html">5M Knife</a>
+        <a class="btn" href="euro-7m-knife.html">7M Knife</a>
+        <a class="btn" href="euro-4m-hawk.html">4M Hawk</a>
+        <a class="btn" href="euro-5m-hawk.html">5M Hawk</a>
+        <a class="btn" href="euro-7m-hawk.html">7M Hawk</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>🚶 Walkback Games</h2>
+      <div class="grid">
+        <a class="btn" href="pro-roto.html">Pro Roto</a>
+        <a class="btn" href="pro-no-spin.html">Pro No Spin</a>
+        <a class="btn" href="pro-hawk.html">Pro Hawk</a>
+        <a class="btn" href="am-roto.html">Am Roto</a>
+        <a class="btn" href="am-no-spin.html">Am No Spin</a>
+        <a class="btn" href="am-hawk.html">Am Hawk</a>
+      </div>
+    </div>
+
+    <footer>Blade Aces &middot; Game of Throws IX &middot; 12 games</footer>
+  </div>
+</body>
+</html>
