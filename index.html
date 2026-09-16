@@ -2,61 +2,86 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Game of Throws — Game Reports</title>
+<meta name="theme-color" content="#07172d">
 <style>
-  *{box-sizing:border-box}
-  html,body{margin:0;background:#02060d}
-  body{display:flex;justify-content:center;min-height:100vh}
-  .poster{
-    position:relative;
-    width:min(100%,1024px);
-    line-height:0;
-    box-shadow:0 0 50px #000;
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    min-height: 100%;
+    background: #02060b;
   }
-  .poster img{display:block;width:100%;height:auto}
-  .hotspot{
-    position:absolute;
-    display:block;
-    z-index:2;
-    border-radius:7px;
-    cursor:pointer;
-    line-height:normal;
-    -webkit-tap-highlight-color:transparent;
+  body {
+    display: flex;
+    justify-content: center;
+    font-family: Georgia, "Times New Roman", serif;
   }
-  .hotspot span{
-    position:absolute;
-    width:1px;height:1px;
-    overflow:hidden;
-    clip:rect(0,0,0,0);
-    white-space:nowrap;
+  .poster {
+    position: relative;
+    width: min(100%, 1024px);
+    line-height: 0;
+    background: #07172d;
+    box-shadow: 0 0 50px rgba(0,0,0,.85);
   }
-  .hotspot:hover{
-    background:rgba(255,205,75,.12);
-    box-shadow:inset 0 0 0 2px rgba(255,220,115,.7),0 0 18px rgba(255,190,45,.65);
+  .poster > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    user-select: none;
+    -webkit-user-drag: none;
   }
-  .hotspot:focus-visible{
-    outline:3px solid #fff1a8;
-    outline-offset:2px;
-    background:rgba(255,205,75,.14);
+  .hotspot {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    border-radius: 8px;
+    line-height: normal;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: background .15s ease, box-shadow .15s ease, transform .15s ease;
+  }
+  .hotspot:hover {
+    background: rgba(255, 196, 52, .10);
+    box-shadow:
+      inset 0 0 0 2px rgba(255, 222, 125, .78),
+      0 0 18px rgba(255, 181, 38, .55);
+    transform: translateY(-1px);
+  }
+  .hotspot:focus-visible {
+    outline: 3px solid #fff0a0;
+    outline-offset: 2px;
+    background: rgba(255, 196, 52, .12);
+  }
+  .hotspot span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
   }
 </style>
 </head>
 <body>
-<main class="poster">
-  <img src="gameofthrows.png" alt="Game of Throws Knife and Axe Throwing Championship game reports">
-  <a class="hotspot" href="EURO_3M_KNIFE.html" aria-label="3M KNIFE" style="left:9.5%;top:52.5%;width:39.3%;height:4.5%"><span>3M KNIFE</span></a>
-<a class="hotspot" href="EURO_4M_HAWK.html" aria-label="4M HAWK" style="left:51.7%;top:52.5%;width:40.7%;height:4.5%"><span>4M HAWK</span></a>
-<a class="hotspot" href="EURO_5M_KNIFE.html" aria-label="5M KNIFE" style="left:9.5%;top:57.8%;width:39.3%;height:4.4%"><span>5M KNIFE</span></a>
-<a class="hotspot" href="EURO_5M_HAWK.html" aria-label="5M HAWK" style="left:51.7%;top:57.8%;width:40.7%;height:4.4%"><span>5M HAWK</span></a>
-<a class="hotspot" href="EURO_7M_KNIFE.html" aria-label="7M KNIFE" style="left:9.5%;top:63.1%;width:39.3%;height:4.4%"><span>7M KNIFE</span></a>
-<a class="hotspot" href="EURO_7M_HAWK.html" aria-label="7M HAWK" style="left:51.7%;top:63.1%;width:40.7%;height:4.4%"><span>7M HAWK</span></a>
-<a class="hotspot" href="walkback-game-am-roto-2026-09-01 (11).html" aria-label="ROTO - AM" style="left:9.5%;top:74.1%;width:39.3%;height:4.4%"><span>ROTO - AM</span></a>
-<a class="hotspot" href="walkback-game-pro-roto-2026-09-01 (1).html" aria-label="ROTO - PRO" style="left:51.7%;top:74.1%;width:40.7%;height:4.4%"><span>ROTO - PRO</span></a>
-<a class="hotspot" href="walkback-game-am-no-spin-2026-09-01.html" aria-label="NO SPIN - AM" style="left:9.5%;top:79.1%;width:39.3%;height:4.4%"><span>NO SPIN - AM</span></a>
-<a class="hotspot" href="walkback-game-pro-no-spin-2026-09-01.html" aria-label="NO SPIN - PRO" style="left:51.7%;top:79.1%;width:40.7%;height:4.4%"><span>NO SPIN - PRO</span></a>
-<a class="hotspot" href="walkback-game-am-hawk-2026-09-01 (1).html" aria-label="HAWK - AM" style="left:9.5%;top:84.2%;width:39.3%;height:4.4%"><span>HAWK - AM</span></a>
-<a class="hotspot" href="walkback-game-pro-hawk-2026-09-01 (1).html" aria-label="HAWK - PRO" style="left:51.7%;top:84.2%;width:40.7%;height:4.4%"><span>HAWK - PRO</span></a>
+<main class="poster" aria-label="Game of Throws game reports">
+  <img src="game-of-throws-index.png" alt="Game of Throws Knife and Axe Throwing Championship game reports">
+  <a class="hotspot" href="EURO_3M_KNIFE.html" aria-label="3M KNIFE" style="left:8.6%;top:51.1%;width:39.5%;height:4.1%"><span>3M KNIFE</span></a>
+  <a class="hotspot" href="EURO_4M_HAWK.html" aria-label="4M HAWK" style="left:51.8%;top:51.1%;width:39.5%;height:4.1%"><span>4M HAWK</span></a>
+  <a class="hotspot" href="EURO_5M_KNIFE.html" aria-label="5M KNIFE" style="left:8.6%;top:56.0%;width:39.5%;height:4.1%"><span>5M KNIFE</span></a>
+  <a class="hotspot" href="EURO_5M_HAWK.html" aria-label="5M HAWK" style="left:51.8%;top:56.0%;width:39.5%;height:4.1%"><span>5M HAWK</span></a>
+  <a class="hotspot" href="EURO_7M_KNIFE.html" aria-label="7M KNIFE" style="left:8.6%;top:60.8%;width:39.5%;height:4.1%"><span>7M KNIFE</span></a>
+  <a class="hotspot" href="EURO_7M_HAWK.html" aria-label="7M HAWK" style="left:51.8%;top:60.8%;width:39.5%;height:4.1%"><span>7M HAWK</span></a>
+  <a class="hotspot" href="walkback-game-am-roto-2026-09-01 (11).html" aria-label="ROTO - AM" style="left:8.6%;top:68.7%;width:39.5%;height:4.1%"><span>ROTO - AM</span></a>
+  <a class="hotspot" href="walkback-game-pro-roto-2026-09-01 (1).html" aria-label="ROTO - PRO" style="left:51.8%;top:68.7%;width:39.5%;height:4.1%"><span>ROTO - PRO</span></a>
+  <a class="hotspot" href="walkback-game-am-no-spin-2026-09-01.html" aria-label="NO SPIN - AM" style="left:8.6%;top:73.5%;width:39.5%;height:4.1%"><span>NO SPIN - AM</span></a>
+  <a class="hotspot" href="walkback-game-pro-no-spin-2026-09-01.html" aria-label="NO SPIN - PRO" style="left:51.8%;top:73.5%;width:39.5%;height:4.1%"><span>NO SPIN - PRO</span></a>
+  <a class="hotspot" href="walkback-game-am-hawk-2026-09-01 (1).html" aria-label="HAWK - AM" style="left:8.6%;top:78.3%;width:39.5%;height:4.1%"><span>HAWK - AM</span></a>
+  <a class="hotspot" href="walkback-game-pro-hawk-2026-09-01 (1).html" aria-label="HAWK - PRO" style="left:51.8%;top:78.3%;width:39.5%;height:4.1%"><span>HAWK - PRO</span></a>
+  <a class="hotspot" href="https://challonge.com/uznqw7kw" target="_blank" rel="noopener noreferrer" aria-label="QUICK DRAW" style="left:8.6%;top:83.0%;width:82.7%;height:5.0%"><span>QUICK DRAW</span></a>
 </main>
 </body>
 </html>
